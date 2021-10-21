@@ -1,0 +1,109 @@
+class Main {
+    public static void main(String[] args) {
+        int[] array = {1, 5, 4, 3, 7}; //объявляем и инициализируем массив
+        System.out.println(array);//пытаемся вывести наш массив на экран без метода toString - получаем 16-ричное число
+        System.out.println(Arrays.toString(array));//печатаем массив "правильно"
+        Arrays.sort(array, 0, 4); //сортируем весь массив от нулевого до четвёртого члена
+        System.out.println(Arrays.toString(array));//выводим отсортированный массив на экран
+        int key = Arrays.binarySearch(array, 5); // ищем key - число 5 в отсортированном массиве.
+        //метод binarySearch выдаст индекс элемента остортированного массива, в котором "спрятано" искомое число
+        System.out.println(key);//распечатываем индекс искомого числа
+System.out.println(Arrays.binarySearch(array, 0));//а теперь попробуем найти число, которого в массиве нет,
+        // и сразу же выведем результат на экран
+
+    }
+}
+____________________________________
+int[] a = new int[10];
+a[2] = 4;
+a[7] = 9;
+int[] b = a;
+
+a[9] = b[2] + a[7];
+_____________________________________
+int n = 100;
+int[] a = new int[n];
+Создание массива из n элементов
+int n = 100;
+int[] a = new int[n * 2 + 3];
+Создание массива на 203 элемента
+int n = 100;
+int[] a = new int[n];
+a[n-1] = 2;
+a[n-2] = 3;
+a[n/5] = a[n-1] + a[n-2]
+
+
+// a[99] = 2;
+// a[98] = 3;
+________________________________________
+int[] array;
+if (a < 10)
+   array = new int[10];
+else
+   array = new int[20];
+   _______________________________
+   array.length;
+   ____________________________________
+   int[] array;
+if (a < 10)
+   array = new int[10];
+else
+   array = new int[20];
+for (int i = 0; i < array.length; i++)
+{
+   System.out.println(array[i]);
+}
+__________________________________________
+Заполнение массива из 10 чисел числами от 0 до 9:
+int[] array = new int[10];
+for (int i = 0; i < 10; i++) {
+   array[i] = i;
+}
+________________________________________
+Заполнение массива из 10 чисел числами от 1 до 10:
+int[] array = new int[10];
+for (int i = 0; i < 10; i++) {
+   array[i] = i + 1;
+}
+________________________________________
+Заполнение массива из 10 чисел числами от 10 до 1:
+int[] array = new int[10];
+for (int i = 0; i < 10; i++) {
+   array[i] = 10 - i;
+}
+_________________________________________
+Код для ввода 10 значений будет выглядеть примерно так (приводим только код внутри метода main):
+
+Scanner console = new Scanner(System.in);
+int[] array = new int[10];
+for (int i = 0; i < 10; i++) {
+   array[i] = console.nextInt();
+}
+______________________________________________
+А как же вывести значения массива в обратном порядке?
+Scanner console = new Scanner(System.in);
+int[] array = new int[10];
+for (int i = 0; i < 10; i++) {
+   array[i] = console.nextInt();
+}
+for (int i = 9; i >= 0; i--) {
+   System.out.println(array[i]);
+}
+__________________________________________
+Поиск минимального элемента в массиве
+Scanner console = new Scanner(System.in);
+int[] array = new int[10];
+for (int i = 0; i < 10; i++) {
+    array[i] = console.nextInt();
+}
+int min = array[0];
+
+for (int i = 1; i < 10; i++) {
+    if (array[i] < min)
+
+       min = array[i];
+}
+System.out.println(min);
+________________________________________
+

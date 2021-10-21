@@ -1,0 +1,78 @@
+int age = 35;
+if (age >= 18 && age <= 65)
+   System.out.println("Вы можете работать");
+Если значение age лежит между 18 и 65, на экран выводится текст «вы можете работать».
+int age = 35;
+boolean isYoung = (age < 18);
+if (!isYoung && age <= 65)
+   System.out.println("Вы можете работать");
+Мы создали переменную isYoung и вынесли в нее первую часть выражения. Только заменили age >= 18 на age < 18.
+int age = 35;
+boolean isYoung = (age < 18);
+boolean isOld = (age > 65);
+if (!isYoung && !isOld)
+   System.out.println("Вы можете работать");
+Мы создали переменную isOld и вынесли в нее вторую часть выражения. При этом заменили age <= 65 на age > 65.
+______________________________________________________________________________________________________________
+
+double a = 1.000001;
+double b = 1.000002;
+if ( (b - a) < 0.0001 )
+   System.out.println("Числа равны");
+else
+   System.out.println("Числа не равны");
+   __________________________________________________________________
+   
+   double a = 1.000001;
+double b = 1.000002;
+
+if ( Math.abs(b - a) < 0.0001 )
+   System.out.println("Числа равны");
+else
+   System.out.println("Числа не равны");
+   ______________________________________________________
+   String text = "Привет";
+String message = text;
+String s1 = text.toUpperCase();
+String s2 = text.toUpperCase();
+System.out.println(text == message);
+System.out.println(text == s1);
+System.out.println(s1 == s2);
+____________________________________________
+
+строка1.equalsIgnoreCase(строка2)
+__________________________________________
+строка1.equals(строка2)
+___________________________________________
+String s1 = "Привет";
+String s2 = "ПРИВЕТ";
+String s3 = s1.toUpperCase();
+
+System.out.println(s1.equals(s2));
+System.out.println(s1.equals(s3));
+System.out.println(s2.equals(s3));
+____________________________________________
+Сравнение последних слов строк
+String line = "Good morning";
+      boolean b1 = line.endsWith("morning");
+      boolean b2 = line.endsWith("evening");
+      System.out.println("String " + line + " ends with 'morning'?  " + b1);
+      System.out.println("String " + line + " ends with 'evening'?  " + b2);
+      ______________________________________________________
+      Сравнение последних строк
+      public class twolines {
+ 
+    public static void main(String[] args) {
+        public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String Str = new String(sc.nextLine());
+        boolean retVal;
+
+        retVal = Str.endsWith("bc");
+        System.out.println(retVal);
+
+
+    }
+    }
+}
+____________________________________________________

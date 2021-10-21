@@ -1,0 +1,96 @@
+
+Метод, меняющий порядок чисел в массиве местами:
+
+ public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+        printArray(array);
+        reverseArray(array);
+        printArray(array);
+
+    }
+
+    public static void reverseArray(int[] array) {
+        for (int i = 0; i < array.length-i-1; i++) {
+            int temp = array[i];
+            array[i] = array[array.length - i - 1];
+            array[array.length - i - 1] = temp;
+        }
+
+    }
+
+    public static void printArray(int[] array) {
+        for (int i : array) {
+            System.out.print(i + ", ");
+        }
+        System.out.println();
+    }
+_____________________________________________________
+        Массив типа String
+Scanner console = new Scanner(System.in);
+String[] array = new String[10];
+for (int i = 0; i < 10; i++)
+{
+   array[i] = console.nextLine();
+}
+for (int i = 9; i >= 0; i--)
+{
+   System.out.println(array[i]);
+}
+______________________________________
+сравнивать ячейки массива:
+
+String[] array = new String[10];
+
+array[1] = "Привет";
+array[2] = array[1];
+array[3] = new String("Привет");
+// сравниваем
+array[1] == array[2];
+array[1] == array[3];
+array[1].equals(array[3]);
+array[1].equalsIgnoreCase(array[3]);
+________________________________________
+Быстрая инициализация массива в Java
+int[] months = new int[12];
+months[0] = 31; // январь
+months[1] = 28; // февраль
+months[2] = 31; // март
+months[3] = 30; // апрель
+months[4] = 31; // май
+months[5] = 30; // июнь
+months[6] = 31; // июль
+months[7] = 31; // август
+months[8] = 30; // сентябрь
+months[9] = 31; // октябрь
+months[10] = 30; // ноябрь
+months[11] = 31; // декабрь
+___________________________________
+Но есть способ записать его короче — спасибо создателям Java:
+
+// длины месяцев года
+int[] months = new int[] { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+____________________________________
+можно записать еще короче:
+
+// длины месяцев года
+int[] months = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+_______________________________________
+не только для типа int...
+
+// имена месяцев года
+String[] months = { "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"};
+_____________________________________
+   Как изменить порядок в строке на обратный
+   public static String reverseByArray(String s) {
+        char[] a = s.toCharArray();
+        char[] b = new char[a.length];
+        for (int i = 0; i < a.length; i++) {
+            b[(a.length - 1) - i] = a[i];
+        }
+        return new String(b);
+    }
+    public static void main(String[] args) {
+        String string = "Java test";
+        System.out.println(reverseByArray(string));
+    }
+    ____________________________________________________

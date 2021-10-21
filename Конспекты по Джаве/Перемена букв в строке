@@ -1,0 +1,7 @@
+StringBuffer novinki = new StringBuffer("я новинки");
+novinki.insert(7,"ь");
+novinki.insert(10,"й");
+novinki.replace(5,6,"e");
+System.out.println(novinki);
+
+//получается исправленная надпись "я новенький".

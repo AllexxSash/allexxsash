@@ -1,0 +1,42 @@
+			Приведение целых чисел в вещественные
+			int a = 5;
+int b = 2;
+double d = 1.0 * a / b;
+__________________________
+int a = 5;
+int b = 2;
+double d = a * 1.0 / b;
+_________________________
+int a = 5;
+int b = 2;
+double d = a / b * 1.0;
+________________________
+				и наоборот
+int x = (int) Math.round(4.1);
+4
+int x = (int) Math.round(4.5);
+5
+int x = (int) Math.round(4.9);
+5_____________________________
+int x = (int) Math.ceil(4.1);
+5
+int x = (int) Math.ceil(4.5);
+5
+int x = (int) Math.ceil(4.9);
+5
+_____________________________
+int x = (int) Math.floor(4.1);
+4
+int x = (int) Math.floor(4.5);
+4
+int x = (int) Math.floor(4.9);
+4
+______________________________
+int x = (int) 4.9
+4
+______________________________
+Math — математика
+Round — круг/округлять
+Ceiling — потолок
+Floor — пол
+_____________________________

@@ -1,0 +1,83 @@
+Результат функции
+Оператор return
+return;
+class Solution
+{
+   public static void fill(int[] data, int from, int to, int value)
+   {
+
+
+     if (from < 0 || to > data.length)
+       return;
+
+     for (int i = from; i < to; i++)
+     {
+       data[i] = value;
+     }
+   }
+
+   public static void main(String[] args)
+   {
+     int[] months = {1, 2, 3, 4, 5, 6, 7, 8 ,9, 10, 11, 12};
+     fill(months, 2, 10, 8);
+   }
+}
+
+
+Метод fill заполняет часть переданного массива значением value.
+Часть массива определяется индексами from и to.
+Если from меньше 0 или to больше длины массива, метод тут же завершается.
+_____________________________________________
+Функции с результатом, void
+double delta = Math.abs(d1 - d2);
+Метод abs() возвращает значение типа double
+Scanner console = new Scanner(System.in);
+int x = console.nextInt();
+
+Метод nextInt() возвращает значение типа int
+String str = "Привет";
+String s2 = str.toUpperCase();
+
+Метод toUpperCase() возвращает значение типа String
+int[] data = {1, 4, 5, 6, 7, 8, 11};
+int[] array = Arrays.copyOf(data, 4);
+
+Метод copyOf() возвращает значение типа int[]
+_______________________________________________
+Возвращение результата
+return значение;
+int min(int a, int b)
+{
+   if (a < b)
+     return a;
+   else
+     return b;
+}
+Метод возвращает минимум из двух чисел.
+
+Если a < b
+вернуть a
+Иначе
+вернуть b
+_______________________________________
+Метод дублирует переданную в него строку n раз:
+
+String multiple(String str, int times)
+{
+   String result = "";
+   for (int i = 0; i < times; i++)
+     result = result + " "+ str;
+   return result;
+}
+________________________________________
+ Метод вычисляет максимум из двух чисел с помощью тернарного оператора:
+
+int max(int a, int b)
+{
+   return (a > b ? a : b);
+}
+Метод возвращает максимум из двух чисел.
+
+вернуть (если a > b, то a, иначе b)
+__________________________________________
+

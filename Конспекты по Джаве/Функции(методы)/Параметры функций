@@ -1,0 +1,154 @@
+Параметры функции в Java
+ Передача параметров
+ public static void print(String str)
+{
+}
+Объявлен метод print с параметром
+String str
+public static void print(String str, int count)
+{
+}
+Объявлен метод print с двумя параметрами
+String str
+int count
+public static void write(int x, int y)
+{
+}
+Объявлен метод write с двумя параметрами
+int x
+int y
+______________________________________
+class Solution
+{
+   public static void printLines(String text, int count)
+   {
+     for (int i = 0; i < count; i++)
+       System.out.println(text);
+   }
+
+   public static void main(String[] args)
+   {
+     printLines("Привет", 10);
+     printLines("Пока", 20);
+   }
+}
+_________________________________________
+class Solution
+{
+   public static void printLines(String text, int count)
+   {
+     for (int i = 0; i < count; i++)
+       System.out.println(text);
+   }
+
+   public static void main(String[] args)
+   {
+     printLines("Привет", 10);
+     printLines("Пока", 20);
+   }
+}
+______________________________________
+Конфликт имен переменных при вызове метода
+class Solution
+{
+   public static void printLines(String text, int count)
+   {
+     for (int i = 0; i < count; i++)
+       System.out.print(text);
+   }
+
+   public static void main(String[] args)
+   {
+     String str = "Привет";
+     int n = 10;
+     printLines(str, n);
+   }
+}
+__________________________________________
+class Solution
+{
+   public static void printLines(String text, int count)
+   {
+     for (int i = 0; i < count; i++)
+       System.out.print(text);
+   }
+
+   public static void main(String[] args)
+   {
+     String text = "Привет";
+     int count = 10;
+     printLines(text, count);
+   }
+}
+______________________________________
+Передача ссылок в методы
+class Solution
+{
+   public static void printArraySum(int[] data)
+   {
+     int sum = 0;
+     for (int i = 0; i < data.length; i++)
+       sum = sum + data[i];
+     System.out.println(sum);
+   }
+   
+   public static void main(String[] args)
+   {
+     int[] months = {31, 28, 31, 30, 31, 30, 31, 31, 30};
+     printArraySum(months);
+   }
+}
+
+
+Метод printArraySum считает сумму чисел переданного массива и выводит ее на экран
+_________
+Произойдет ровно то же самое: переменная-параметр data будет содержать ссылку на тот же контейнер, что и переменная months. При вызове метода просто произойдет присваивание data = months.
+
+А раз обе переменные ссылаются на один и тот же контейнер целых чисел, то метод printArraySum может не просто читать значения из массива, но и менять их!
+
+Например, мы можем написать свой собственный метод, который заполняет двумерный массив одинаковыми значениями. Вот как он мог бы выглядеть:
+
+Код	Пояснение
+class Solution
+{
+   public static void fill(int[][] data, int value)
+   {
+     for (int i = 0; i < data.length; i++)
+     {
+       for (int j = 0; j < data[i].length; j++)
+         data[i][j] = value;
+     }
+  }
+
+   public static void main(String[] args)
+   {
+     int[][] months = {{31, 28}, {31, 30, 31}, {30, 31, 31}};
+     fill (months, 8);
+   }
+}
+___________________________________________________
+Методы с одинаковыми именами
+void fill(int[] data, int value) {
+}
+void fill(int[][] data, int value) {
+}
+void fill(int[][][] data, int value)  {
+}
+Эти три метода считаются разными. Их можно объявить в одном классе.
+void print(String str) {
+}
+void print(String str, String str2) {
+}
+void print(int val) {
+}
+void print(double val) {
+}
+void print() {
+}
+Все эти пять методов считаются разными. Их можно объявить в одном классе.
+void sum(int x, int y) {
+}
+void sum(int data, int value) {
+}
+Эти два метода считаются одинаковыми (их нельзя объявить в одном классе).
+

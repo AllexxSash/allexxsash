@@ -1,0 +1,127 @@
+Scanner console = new Scanner(System.in);
+boolean isExit = false;
+while (!isExit)
+{
+   String s = console.nextLine();
+   isExit = s.equals("exit");
+}
+____________________________________
+Scanner console = new Scanner(System.in);
+while (true)
+{
+   String s = console.nextLine();
+   if (s.equals("exit"))
+     break;
+}
+________________________________________
+int i = 1;
+while (i <= 20)
+{
+   if ( (i % 7) == 0 )
+     continue;
+   System.out.println(i);
+   i++;
+}
+_______________________________________
+int i = 1;
+while (i <= 20)
+{
+   if ( (i % 7) == 0 )
+   {
+     i++;
+     continue;
+   }
+   
+   System.out.println(i);
+   i++;
+}
+_______________________________________________
+int i = 0;
+while (i < 20)
+{
+   i++;
+   if ( (i % 7) == 0)
+     continue;
+   System.out.println(i);
+}
+____________________________________________
+Scanner console = new Scanner(System.in);
+int sum = 0;
+while (console.hasNextInt())
+{
+   int x = console.nextInt();
+   sum = sum + x;
+}
+System.out.println(sum); 
+________________________________________________
+Scanner console = new Scanner(System.in);
+int max = 0;
+while (console.hasNextInt())
+{
+   int x = console.nextInt();
+   if (x > max)
+     max = x;
+}
+System.out.println(max); 
+_____________________________________________
+for (int i = 0; i < 20; i++)
+{
+   System.out.println(i);
+}
+_________________________________________
+int i = 0;
+while (i < 20)
+{
+   System.out.println(i);
+   i++;
+}
+_______________________________________
+int i = 1;
+while (i <= 20)
+{
+   if ( (i % 7) == 0) continue;
+   System.out.println(i);
+   i++;
+}
+_______________________________________
+Scanner console = new Scanner(System.in);
+int count = 0;
+for (int i = 0; i < 10; i++)
+{
+   if (console.hasNextInt())
+      count++;
+   console.nextLine();
+}
+System.out.println(count);
+___________________________________________
+int f = 1;
+for (int i = 1; i <= 10; i++)
+   f = f * i;
+System.out.println(f);
+_____________________________________
+			Рисуем звездочками
+for (int i = 0; i < 10; i++)
+{
+   int starCount = 10 - i;
+   for (int j = 0; j < starCount; j++)
+      System.out.print("*");
+   System.out.println();
+}
+_________________________________________
+			while - do-while
+String s;
+while (true)
+{
+   s = console.nextLine();
+   if (s.equals("exit"))
+      break;
+}
+_________________________________________
+String s;
+do
+{
+   s = console.nextLine();
+}
+while (!s.equals("exit"));
+________________________________________
+			

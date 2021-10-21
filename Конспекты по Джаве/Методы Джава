@@ -1,0 +1,53 @@
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Scanner;
+import java.util.stream.Stream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					Методы
+					Java Массивы
+			https://docs.oracle.com/javase/6/docs/api/java/util/Arrays.html		
+					
+Чтобы объявить массив целых чисел, вы начинаете с:
+
+int[] myArray;
+Чтобы создать экземпляр массива из десяти целых чисел, вы можете попробовать:
+
+myArray = new int[10];
+Чтобы задать значения в этом массиве, попробуйте:
+
+myArray[0] = 1; // arrays indices are 0 based in Java
+Или при создании экземпляра:
+
+int[] myArray2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+Чтобы получить значения из массива, попробуйте:
+
+System.out.println(myArray[0]);
+Чтобы напечатать все значения в массиве, попробуйте:
+
+// go from 0 to one less than the array length, based on 0 indexing
+for(int i = 0; i < myArray2.length; i++) {
+    System.out.println(myArray2[i]);
+}				
+	int[] myArray = {1, 2, 3, 4};
+System.out.println(Arrays.toString(myArray));
+
+int[] unsorted = {3, 4, 1, 2, 5, 7, 6};
+Arrays.sort(unsorted);

@@ -1,0 +1,57 @@
+	if-else
+int age = 17;
+if (age < 18)
+   System.out.println("Вы еще ребенок");
+else
+   System.out.println("Вы уже взрослый");
+На экран будет выведена надпись:
+Вы еще ребенок
+___________________________________________
+int temperature = 5;
+if (temperature < 0)
+   System.out.println("На улице мороз");
+else
+   System.out.println("Тепло");
+На экран будет выведена надпись:
+Тепло
+___________________________________________
+int age = 18;
+if (age == 18)
+   System.out.println("Явитесь в военкомат");
+else
+   System.out.println("Все равно явитесь");
+  __________________________________________
+   
+   int temperature = 9;
+
+if (temperature > 20)
+   System.out.println("надеть рубашку");
+else if (temperature > 10) // тут температура меньше (или равна) 20
+   System.out.println("надеть свитер");
+else if (temperature > 0) // тут температура меньше (или равна) 10
+   System.out.println("надеть плащ");
+else // тут температура меньше 0
+   System.out.println("надеть пальто");
+   _____________________________________
+   
+   int age = 65;
+
+if (age < 60)
+   if (age > 20)
+      System.out.println("Надо работать");
+else
+   System.out.println("Можно не работать");
+   ________________________________________
+   import java.util.Scanner;
+public class Solution {
+   public static void main(String[] args)
+   {
+     Scanner console = new Scanner(System.in);  // создаем объект Scanner
+     int a = console.nextInt();  // читаем с клавиатуры первое число
+     int b = console.nextInt();  // читаем с клавиатуры второе число
+     if (a < b)                   // если a меньше b
+       System.out.println(a);     // выводим на экран a
+     else                         // иначе
+       System.out.println(b);     // выводим на экран b
+   }
+}
