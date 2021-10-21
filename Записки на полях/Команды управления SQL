@@ -1,0 +1,15 @@
+Вот все команды, которые мы использовали, вместе с их описанием:
+CREATE DATABASE database_name; — создать новую БД
+SHOW DATABASES; — посмотреть список БД
+DROP DATABASE database_name; — удалить БД
+USE database_name; — работать в БД
+CREATE TABLE table_name (id INT, ....); — создать таблицу
+SHOW TABLES; — посмотреть список таблиц
+DESC TABLE table_name; — посмотреть схему таблицы
+DROP TABLE table_name; — удалить таблицу
+INSERT INTO table_name VALUES (); — добавить поле в таблицу
+SELECT * FROM table_name WHERE table_row = value; — получить поля в таблице при условии после WHERE
+SELECT * FROM table_name; — получить все поля в таблице
+ALTER TABLE table_name ADD COLUMN column_name COLUMN_TYPE; — добавить поле новое поле в схему таблицы
+UPDATE talbe_name SET talbe_row1 = value1 WHERE table_row2 = value2; — обновить записи в таблице: установить значения одного поля при условии для другого поля
+DELETE FROM table_name WHERE table_row1 = value1; — удалить поле (или поля) из таблицы при определенном условии.
