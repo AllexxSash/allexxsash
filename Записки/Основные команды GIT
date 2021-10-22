@@ -11,3 +11,11 @@ git reset HEAD^ --hard (Отменить изменения, вернуться 
 
 Your branch is ahead of 'origin/master' by 3 commits.
 В другом посте я читал, что способ исправить это - запустить, git pull --rebase
+
+       ПРОБЛЕМА С РУССКОЙ КОДИРОВКОЙ!!! БЫСТРОЕ РЕШЕНИЕ!!!
+       для отключения такого преобразования только в текущем хранилище выполните:
+
+$ git config core.quotepath false
+для глобального отключения добавьте опцию --global:
+
+$ git config --global core.quotepath false
